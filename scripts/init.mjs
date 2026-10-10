@@ -16,7 +16,7 @@ const replacements = [
     ['tab-counter', slug],
     ['tab_counter', slug.replace(/-/g, '_')],
     ['Counts your tabs and closes the blank ones. A Hacktoolkit skeleton extension.', description],
-    ['hacktoolkit/htk-chrome-extension-skeleton', repo]
+    ['hacktoolkit/skeleton-chrome-extension', repo]
 ];
 function walk(dir, out = []) {
     for (const f of readdirSync(dir)) {
