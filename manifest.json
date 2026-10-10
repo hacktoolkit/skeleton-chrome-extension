@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Counter",
+    "short_name": "Tab Counter",
+    "version": "0.1.0",
+    "description": "Counts your tabs and closes the blank ones. A Hacktoolkit skeleton extension.",
+    "author": "Hacktoolkit (@hacktoolkit)",
+    "minimum_chrome_version": "121",
+    "icons": { "16": "img/icon16.png", "32": "img/icon32.png", "48": "img/icon48.png", "128": "img/icon128.png" },
+    "action": {
+        "default_icon": { "16": "img/icon16.png", "32": "img/icon32.png" },
+        "default_popup": "src/popup.html",
+        "default_title": "Tab Counter"
+    },
+    "options_ui": { "page": "src/options.html", "open_in_tab": true },
+    "background": { "service_worker": "src/background.js", "type": "module" },
+    "permissions": ["tabs", "storage", "contextMenus"],
+    "commands": {
+        "_execute_action": { "description": "Open Tab Counter" },
+        "closeBlank": { "description": "Close blank tabs" }
+    }
+}

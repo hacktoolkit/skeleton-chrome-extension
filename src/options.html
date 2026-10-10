@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tab Counter Settings</title>
+    <link rel="stylesheet" href="ui.css" />
+    <style>
+        body { font-size: 14px; }
+        main { max-width: 720px; margin: 0 auto; padding: 28px 24px 60px; }
+        .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin-bottom: 20px; box-shadow: var(--shadow); }
+        h2 { margin: 0 0 6px; font-size: 18px; }
+        .row { display: flex; align-items: center; gap: 20px; padding: 14px 0; border-top: 1px solid var(--line); }
+        .row:first-of-type { border-top: 0; } .row .lbl { flex: 1; } .row .lbl b { display: block; font-weight: 550; } .row .lbl span { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+        .toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; align-items: center; }
+        textarea { width: 100%; resize: vertical; }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="card">
+            <h2>Tab Counter <span id="version" class="muted"></span></h2>
+            <div class="row"><div class="lbl"><b>Confirm before closing</b><span>Show a preview before any action that closes tabs.</span></div><input type="checkbox" id="confirmClose" /></div>
+            <div class="row"><div class="lbl"><b>Tab count on the toolbar icon</b></div><input type="checkbox" id="showBadge" /></div>
+        </section>
+        <section class="card">
+            <h2>Backup</h2>
+            <p class="muted">Settings sync with your browser profile. Export and import to move between profiles.</p>
+            <div class="toolbar"><button id="export" class="primary">Download settings JSON</button><button id="import">Import from file…</button><input type="file" id="import-file" accept="application/json,.json" hidden /><span id="status" class="muted"></span></div>
+        </section>
+    </main>
+    <script type="module" src="options.js"></script>
+</body>
+</html>

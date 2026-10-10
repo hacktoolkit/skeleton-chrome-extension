@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tab Counter</title>
+    <link rel="stylesheet" href="ui.css" />
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+    <header class="head">
+        <img src="../img/icon32.png" alt="" width="20" height="20" />
+        <div class="head-text">
+            <h1>Tab Counter</h1>
+            <div id="stats" class="stats muted">Counting…</div>
+        </div>
+    </header>
+    <main><div id="actions"></div></main>
+    <section id="panel" class="panel" hidden>
+        <div class="panel-head"><div id="panel-title" class="panel-title"></div><button id="panel-close" class="ghost icon" aria-label="Close">×</button></div>
+        <div id="panel-body"></div>
+        <div class="panel-foot"><button id="panel-cancel">Cancel</button><button id="panel-confirm" class="danger">Confirm</button></div>
+    </section>
+    <footer class="foot"><span class="spacer"></span><a href="#" id="open-options">Settings</a></footer>
+    <div id="toast" class="toast" hidden></div>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
